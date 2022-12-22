@@ -13,12 +13,12 @@ use PHPHtmlParser\Exceptions\StrictException;
 
 $dom = new Dom;
 //try {
-//    $dom->loadFromFile('wo_for_parse.html');
+//    $dom->loadFromFile('example.html');
 //} catch (ChildNotFoundException|CircularException|ContentLengthException|LogicalException|StrictException $e) {
 //    echo 'Something goes wrong!';
 //    throw $e;
 //}
-$dom->loadFromFile('wo_for_parse.html');
+$dom->loadFromFile('example.html');
 
 $htmlParser = new GivenHtmlPageParser(new GivenHtmlPage(), $dom);
 CsvSaver::saveToCsv('output.csv', $htmlParser->getAllData());
