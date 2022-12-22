@@ -16,4 +16,4 @@ In CLI run `php src/parseHtmlToCsv.php file_path.html`. You can run it with defa
 
 # Final thoughts
 1. Shouldn't store money as float. PHP Money is a better way.
-2. 
+2. Not unique id elements (location_address).
