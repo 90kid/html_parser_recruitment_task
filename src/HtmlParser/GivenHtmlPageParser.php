@@ -29,7 +29,7 @@ class GivenHtmlPageParser
 
     public function getPoNumberFromHtml(): void
     {
-            $this->givenHtmlPageModel->poNumber = $this->dom->getElementById(self::PO_NUMBER)->text;
+        $this->givenHtmlPageModel->poNumber = $this->dom->getElementById(self::PO_NUMBER)->text;
     }
 
     public function getScheduleDateFromHtml(): void

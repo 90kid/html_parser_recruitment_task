@@ -10,7 +10,7 @@ class GivenHtmlPage
         public ?string $scheduleDate = null,
         public ?string $customer = null,
         public ?string $trade = null,
-        public ?float $nte = null,
+        public ?float  $nte = null,
         public ?string $storeId = null,
         public ?string $street = null,
         public ?string $city = null,
@@ -23,20 +23,6 @@ class GivenHtmlPage
 
     public function toArray(): array
     {
-        return (array) $this;
-//        return [
-//            'trackingNumber' => $this->trackingNumber,
-//            'poNumber' => $this->poNumber,
-//            'scheduleDate' => $this->scheduleDate,
-//            'customer' => $this->customer,
-//            'trade' => $this->trade,
-//            'nte' => $this->nte,
-//            'storeId' => $this->storeId,
-//            'street' => $this->street,
-//            'city' => $this->city,
-//            'state' => $this->state,
-//            'zipCode' => $this->state,
-//            'phoneNumber' => $this->state,
-//        ];
+        return (array)$this;
     }
 }
