@@ -6,10 +6,9 @@ use Dawid\HtmlParser\HtmlParser\GivenHtmlPageParser;
 use Dawid\HtmlParser\Models\GivenHtmlPage;
 use PHPHtmlParser\Dom;
 
-
 $filePath = $argv[1] ?? 'example.html';
 $dom = new Dom;
-$dom->loadFromFile('example.html');
+$dom->loadFromFile($filePath);
 
 $htmlParser = new GivenHtmlPageParser(new GivenHtmlPage(), $dom);
 CsvSaver::saveToCsv('output.csv', $htmlParser->getAllData());
