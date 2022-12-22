@@ -13,3 +13,7 @@ Recruitment task. HTML parser.
 # How it works?
 In CLI run `php src/parseHtmlToCsv.php file_path.html`. You can run it with default argument.
 `php src/parseHtmlToCsv.php` then it takes `example.html` as default file. Output will be in `output.csv`.
+
+# Final thoughts
+1. Shouldn't store money as float. PHP Money is a better way.
+2. 

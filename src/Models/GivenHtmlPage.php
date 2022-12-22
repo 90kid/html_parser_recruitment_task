@@ -16,7 +16,7 @@ class GivenHtmlPage
         public ?string $city = null,
         public ?string $state = null,
         public ?string $zipCode = null,
-        public ?string $phoneNumber = null //TODO float? XD
+        public ?string $phoneNumber = null
     )
     {
     }
