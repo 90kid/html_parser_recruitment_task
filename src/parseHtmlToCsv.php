@@ -11,13 +11,9 @@ use PHPHtmlParser\Exceptions\ContentLengthException;
 use PHPHtmlParser\Exceptions\LogicalException;
 use PHPHtmlParser\Exceptions\StrictException;
 
+
+$filePath = $argv[1] ?? 'example.html';
 $dom = new Dom;
-//try {
-//    $dom->loadFromFile('example.html');
-//} catch (ChildNotFoundException|CircularException|ContentLengthException|LogicalException|StrictException $e) {
-//    echo 'Something goes wrong!';
-//    throw $e;
-//}
 $dom->loadFromFile('example.html');
 
 $htmlParser = new GivenHtmlPageParser(new GivenHtmlPage(), $dom);
