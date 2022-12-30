@@ -73,7 +73,9 @@ class GivenHtmlPageParser
 
     public function getPhoneNumberFromHtml(): void
     {
-        $this->givenHtmlPageModel->phoneNumber = $this->dom->getElementById(self::PHONE_NUMBER_HTML_ID)->text;
+        $phoneNumber = $this->dom->getElementById(self::PHONE_NUMBER_HTML_ID)->text;
+        $phoneNumberWithoutNonNumericChars = preg_replace("/[^0-9]/", "", $phoneNumber);
+        $this->givenHtmlPageModel->phoneNumber = floatval($phoneNumberWithoutNonNumericChars);
     }
 
     public function getAllData(): array
